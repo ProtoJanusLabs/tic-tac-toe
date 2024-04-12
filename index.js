@@ -13,11 +13,17 @@ function Gameboard() {
     }
   };
 
-  const log = () => {
-    console.table(board);
+  const render = () => {
+    const gameGrid = document.getElementById("gameGrid");
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < columns; j++) {
+        const gameSquare = document.createElement("div");
+        gameGrid.appendChild(gameSquare);
+      }
+    }
   };
 
-  return { createBoard, log };
+  return { createBoard, render };
 }
 
 function GameController() {
@@ -32,6 +38,16 @@ function GameController() {
     },
   ];
 
+  let activePlayer = players[0];
+
+  const switchActivePlayer = () => {
+    activePlayer = activePlayer === players[0] ? players[1] : players[0];
+  };
+
   const board = Gameboard();
   board.createBoard();
 }
+
+const board = Gameboard();
+board.createBoard();
+board.render();
