@@ -36,11 +36,10 @@ body {
   max-width: 800px;
   width: 100%;
   background-color: #a5a5a5;
-  opacity: .9;
+  opacity: 0.9;
 
   div {
     background-color: #171717;
-
   }
   div:hover {
     cursor: pointer;
@@ -59,4 +58,77 @@ body {
 #playButton:hover {
   color: #ffffff;
   cursor: pointer;
+}
+
+.gameSquare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.gameSquareText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fredericka the Great", serif;
+  color: #a5a5a5;
+  font-size: 70px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+
+.popup {
+  max-width: 400px;
+  max-height: 200px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: #171717;
+  border: 5px solid #774805;
+
+  h1 {
+    font-size:40px;
+    color: #c5c5c5;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+  }
+
+  p{
+    font-size: 30px;
+    font-family: "Fredericka the Great", serif;
+    color: #c5c5c5;
+    padding: 15px 0;
+    margin: 0;
+  }
+
+  button {
+    font-family: "Fredericka the Great", serif;
+    padding: 10px 20px;
+    background-color: #171717;
+    color: #c5c5c5;
+    border: none;
+    font-size: 30px;
+    margin-top: 15px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
+
+#infoPanel {
+  margin-top :20px;
+  padding: 0;
+  p {
+    color: #a5a5a5;
+    font-family: "Fredericka the Great", serif;
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+  }
 }
